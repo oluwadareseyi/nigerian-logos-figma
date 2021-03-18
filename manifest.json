@@ -1,0 +1,7 @@
+{
+	"name": "enter your app name",
+	"id": "enter your app id",
+	"api": "1.0.0",
+	"main": "dist/code.js",
+	"ui": "dist/ui.html"
+}
