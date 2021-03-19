@@ -13,6 +13,7 @@
     "@babel/runtime": "^7.8.4",
     "@figma-plugin/helpers": "^0.13.2",
     "@figma/plugin-typings": "^1.15.0",
+    "axios": "^0.21.1",
     "vue": "^2.6.11",
     "vue-resource": "^1.5.1",
     "vue-sweetalert2": "^3.0.5",

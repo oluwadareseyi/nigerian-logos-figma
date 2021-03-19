@@ -3,8 +3,8 @@ const start = Date.now();
 
 // shwo UI and edit dimensions of plugin frame
 figma.showUI(__html__, {
-  width: 310,
-  height: 440
+  width: 460,
+  height: 590
 });
 
 const eventFunction = () => {
