@@ -45,7 +45,7 @@ p {
     }
 
     input {
-      width: 95%;
+      width: 100%;
       background: #ffffff;
       border: 1px solid #e2e1e1;
       box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04);
@@ -56,6 +56,12 @@ p {
       font-weight: 600;
       outline: none;
       font-size: 17px;
+
+      &::placeholder {
+        color: #b1b0b0;
+        font-weight: 400;
+        font-size: 16px;
+      }
 
       &:focus {
         border: 1.5px solid $col-green;
@@ -104,7 +110,7 @@ p {
       margin-top: 24px;
 
       &__box {
-        height: 200px;
+        height: 210px;
         border: 1px solid #e2e1e1;
         padding: 15px 25px;
         position: relative;
@@ -135,9 +141,9 @@ p {
           align-items: center;
           height: 100%;
           &__category {
-            font-size: 12px;
+            font-size: 14px;
             color: #737272;
-            font-weight: 400;
+            font-weight: 600;
             font-style: italic;
           }
 
@@ -147,6 +153,15 @@ p {
             position: relative;
             z-index: 10;
             transition: color 0.2s;
+          }
+
+          &__icon {
+            width: 100%;
+            text-align: center;
+
+            img {
+              width: 70%;
+            }
           }
         }
 
@@ -184,6 +199,22 @@ p {
             }
           }
         }
+      }
+    }
+
+    .c-empty {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h3 {
+        font-size: 18px;
+      }
+
+      &__icon {
+        margin-bottom: 20px;
       }
     }
   }

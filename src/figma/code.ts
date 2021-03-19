@@ -18,14 +18,28 @@ const eventFunction = () => {
   });
 };
 
+const createSvg = (svgString: string) => {
+  const nodes: SceneNode[] = [];
+
+  const svg = figma.createNodeFromSvg(svgString);
+  nodes.push(svg);
+  figma.currentPage.selection = nodes;
+};
+
 // Receive Events
 figma.ui.onmessage = event => {
   if (event.type === 'close') {
+    if (event.message) {
+      figma.closePlugin(event.message);
+    }
     figma.closePlugin();
   }
-  if (event.type === 'event-click') {
-    // let selected = figma.currentPage.selection['0'];
-    eventFunction();
+  if (event.type === 'show-message') {
+    figma.notify('A network error occured, please try again');
+  }
+
+  if (event.type === 'icon-loaded') {
+    createSvg(event.data);
   }
 };
 
