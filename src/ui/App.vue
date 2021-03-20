@@ -105,7 +105,6 @@ export default {
       try {
         const res = await axios.get(`${this.baseUrl}/logos`);
         this.companies = res.data;
-        console.log(res);
       } catch (error) {
         const { response } = error;
         parent.postMessage(
@@ -146,7 +145,6 @@ export default {
     async importSvg(filename) {
       try {
         const res = await axios.get(`${this.baseUrl}/logos/${filename}`);
-        console.log(res);
         parent.postMessage(
           {
             pluginMessage: {
