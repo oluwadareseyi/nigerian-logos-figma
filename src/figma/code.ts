@@ -24,6 +24,8 @@ const createSvg = (svgString: string) => {
   const svg = figma.createNodeFromSvg(svgString);
   nodes.push(svg);
   figma.currentPage.selection = nodes;
+
+  figma.viewport.scrollAndZoomIntoView(nodes);
 };
 
 // Receive Events
