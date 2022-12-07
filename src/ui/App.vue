@@ -76,7 +76,7 @@ export default {
     return {
       search: '',
       loading: false,
-      baseUrl: 'https://nigerian-logos-server.herokuapp.com/api',
+      baseUrl: 'https://nigerian-logos-api.vercel.app/api',
       companies: null
     };
   },
